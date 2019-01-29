@@ -1,6 +1,6 @@
 //
 //  Sampleable.swift
-//  JSONAPIOpenAPI
+//  Sampleable
 //
 //  Created by Mathew Polzin on 1/15/19.
 //
