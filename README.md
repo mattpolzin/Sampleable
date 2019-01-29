@@ -2,6 +2,8 @@
 
 A lightweight protocol for describing types that can provide samples of themselves.
 
+Note that the intention of this protocol is not to dictate that samples are constant or random; they can be either depending on the use-case. It is very easy to combine use of this protocol with the use of something like `SwiftCheck`'s `Arbitrary` to either pass arbitrary values as samples OR maintain both a small set of constant samples AND access to arbitrary randomly generated values.
+
 ## Usage
 
 `Sampleable` requires one static method of its conformers.
