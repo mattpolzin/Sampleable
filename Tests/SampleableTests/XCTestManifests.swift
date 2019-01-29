@@ -1,9 +1,15 @@
 import XCTest
 
+extension SampleableTests {
+    static let __allTests = [
+        ("test_SimpleComposition", test_SimpleComposition),
+    ]
+}
+
 #if !os(macOS)
-public func allTests() -> [XCTestCaseEntry] {
+public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(SampleableTests.allTests),
+        testCase(SampleableTests.__allTests),
     ]
 }
 #endif
