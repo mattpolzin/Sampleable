@@ -5,9 +5,18 @@
 //  Created by Mathew Polzin on 1/15/19.
 //
 
-/// A Sampleable type can provide a sample value.
+/// An `AbstractSampleable` type can provide a
+/// sample value.
+public protocol AbstractSampleable {
+    /// Get a sample value of type Self. This can be the
+    /// same value every time, or it can be an arbitrarily random
+    /// value each time.
+    static var abstractSample: Any { get }
+}
+
+/// A `Sampleable` type can provide a sample value.
 /// This is useful for reflection.
-public protocol Sampleable {
+public protocol Sampleable: AbstractSampleable {
 	/// Get a sample value of type Self. This can be the
 	/// same value every time, or it can be an arbitrarily random
 	/// value each time.
@@ -37,6 +46,10 @@ public protocol Sampleable {
 	/// an array with just the result of
 	/// `Self.sample` in it.
 	static var samples: [Self] { get }
+}
+
+public extension Sampleable {
+    static var abstractSample: Any { return sample }
 }
 
 public extension Sampleable {
