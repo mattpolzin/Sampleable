@@ -8,26 +8,26 @@ jobs:
       image: swift:5.1-xenial
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - run: swift test --enable-test-discovery
   bionic_5_1:
     container: 
       image: swift:5.1-bionic
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - run: swift test --enable-test-discovery
   xenial_5_2:
     container: 
       image: swift:5.2-xenial
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - run: swift test --enable-test-discovery
   bionic_5_2:
     container: 
       image: swift:5.2-bionic
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - run: swift test --enable-test-discovery
